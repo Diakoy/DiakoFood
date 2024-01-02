@@ -147,19 +147,29 @@ class MainActivity : AppCompatActivity(), FoodAdapter.FoodEvent {
     }
 
     private fun searchFunction() {
-        binding.edtSearch.addTextChangedListener {edtInput ->
-            if ( binding.edtSearch.length() >0){
-                //Filtering Data
-                val clonedList = foodList.clone() as ArrayList<FoodData>
-                val filteredList =clonedList.filter { foodItem->
-                    return@filter foodItem.txt_title.contains(edtInput.toString())
-                }
-                myadapter.setData(ArrayList(filteredList))
+        binding.edtSearch.addTextChangedListener { editTextInput ->
 
-            }else{
+            if (editTextInput!!.isNotEmpty()) {
+
+                // filter data   'h'
+                val cloneList = foodList.clone() as ArrayList<FoodData>
+                val filteredList = cloneList.filter { foodItem ->
+                    foodItem.txt_title.contains( editTextInput )
+                }
+
+                myadapter.setData(  ArrayList( filteredList )  )
+
+
+            } else {
+
+                // show all data :
                 myadapter.setData(foodList.clone() as ArrayList<FoodData>)
+
             }
+
+
         }
+
 
     }
 

@@ -72,19 +72,20 @@ class FoodAdapter(val data: ArrayList<FoodData>, val foodEvent: FoodEvent) :
         notifyItemChanged(position)
 
     }
-    fun setData(newList :ArrayList<FoodData>){
+    fun setData(newList :ArrayList<FoodData>) {
+
+        // set new data to list :
         data.clear()
-        data.addAll(newList)
+        data.addAll( newList )
+
         notifyDataSetChanged()
     }
-
     interface FoodEvent {
         //create functions
         // create a val in classes arguments
         //call (fill) interface in adapter
         // implement interface in Activity
-
-
+        
         fun onFoodClicked(updatedFood :FoodData ,  position: Int)
         fun onFoodLongClicked(food :FoodData , position: Int)
     }
