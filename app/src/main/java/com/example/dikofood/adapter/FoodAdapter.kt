@@ -26,10 +26,10 @@ class FoodAdapter(val data: ArrayList<FoodData>, val foodEvent: FoodEvent) :
             binding.ratingNum.text = foodData.rating_number
             binding.ratingBar.rating = foodData.rating_bar
             itemView.setOnClickListener {
-                foodEvent.onFoodClicked(data[adapterPosition] , adapterPosition)
+                foodEvent.onFoodClicked(data[adapterPosition], adapterPosition)
             }
             itemView.setOnLongClickListener {
-                foodEvent.onFoodLongClicked(data[adapterPosition] , adapterPosition)
+                foodEvent.onFoodLongClicked(data[adapterPosition], adapterPosition)
 
                 true
             }
@@ -67,27 +67,30 @@ class FoodAdapter(val data: ArrayList<FoodData>, val foodEvent: FoodEvent) :
         data.remove(oldFood)
         notifyItemRemoved(oldPosition)
     }
-    fun updateFood(updatedFood :FoodData , position: Int){
-        data.set(position , updatedFood)
+
+    fun updateFood(updatedFood: FoodData, position: Int) {
+        data.set(position, updatedFood)
         notifyItemChanged(position)
 
     }
-    fun setData(newList :ArrayList<FoodData>) {
+
+    fun setData(newList: ArrayList<FoodData>) {
 
         // set new data to list :
         data.clear()
-        data.addAll( newList )
+        data.addAll(newList)
 
         notifyDataSetChanged()
     }
+
     interface FoodEvent {
         //create functions
         // create a val in classes arguments
         //call (fill) interface in adapter
         // implement interface in Activity
-        
-        fun onFoodClicked(updatedFood :FoodData ,  position: Int)
-        fun onFoodLongClicked(food :FoodData , position: Int)
+
+        fun onFoodClicked(updatedFood: FoodData, position: Int)
+        fun onFoodLongClicked(food: FoodData, position: Int)
     }
 
 }
