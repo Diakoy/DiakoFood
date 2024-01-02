@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity(), FoodAdapter.FoodEvent {
             FoodData(
                 "Grilled fish",
                 "20",
-
                 "Tehran, Iran",
                 "https://dunijet.ir/YaghootAndroidFiles/DuniFoodSimple/food2.jpg",
                 "10",
@@ -49,7 +48,6 @@ class MainActivity : AppCompatActivity(), FoodAdapter.FoodEvent {
             FoodData(
                 "Lasania",
                 "40",
-
                 "Isfahan, Iran",
                 "https://dunijet.ir/YaghootAndroidFiles/DuniFoodSimple/food3.jpg",
                 "30",
@@ -58,7 +56,6 @@ class MainActivity : AppCompatActivity(), FoodAdapter.FoodEvent {
             FoodData(
                 "pizza",
                 "10",
-
                 "Zahedan, Iran",
                 "https://dunijet.ir/YaghootAndroidFiles/DuniFoodSimple/food4.jpg",
                 "80",
@@ -67,7 +64,6 @@ class MainActivity : AppCompatActivity(), FoodAdapter.FoodEvent {
             FoodData(
                 "Sushi",
                 "20",
-
                 "Mashhad, Iran",
                 "https://dunijet.ir/YaghootAndroidFiles/DuniFoodSimple/food5.jpg",
                 "200",
@@ -76,7 +72,6 @@ class MainActivity : AppCompatActivity(), FoodAdapter.FoodEvent {
             FoodData(
                 "Roasted Fish",
                 "40",
-
                 "Jolfa, Iran",
                 "https://dunijet.ir/YaghootAndroidFiles/DuniFoodSimple/food6.jpg",
                 "50",
@@ -85,7 +80,6 @@ class MainActivity : AppCompatActivity(), FoodAdapter.FoodEvent {
             FoodData(
                 "Fried chicken",
                 "70",
-
                 "NewYork, USA",
                 "https://dunijet.ir/YaghootAndroidFiles/DuniFoodSimple/food7.jpg",
                 "70",
@@ -94,7 +88,6 @@ class MainActivity : AppCompatActivity(), FoodAdapter.FoodEvent {
             FoodData(
                 "Vegetable salad",
                 "12",
-
                 "Berlin, Germany",
                 "https://dunijet.ir/YaghootAndroidFiles/DuniFoodSimple/food8.jpg",
                 "40",
@@ -103,7 +96,6 @@ class MainActivity : AppCompatActivity(), FoodAdapter.FoodEvent {
             FoodData(
                 "Grilled chicken",
                 "10",
-
                 "Beijing, China",
                 "https://dunijet.ir/YaghootAndroidFiles/DuniFoodSimple/food9.jpg",
                 "15",
@@ -112,7 +104,6 @@ class MainActivity : AppCompatActivity(), FoodAdapter.FoodEvent {
             FoodData(
                 "Baryooni",
                 "16",
-
                 "Ilam, Iran",
                 "https://dunijet.ir/YaghootAndroidFiles/DuniFoodSimple/food10.jpg",
                 "28",
@@ -121,7 +112,6 @@ class MainActivity : AppCompatActivity(), FoodAdapter.FoodEvent {
             FoodData(
                 "Ghorme Sabzi",
                 "11.5",
-
                 "Karaj, Iran",
                 "https://dunijet.ir/YaghootAndroidFiles/DuniFoodSimple/food11.jpg",
                 "27",
@@ -154,10 +144,10 @@ class MainActivity : AppCompatActivity(), FoodAdapter.FoodEvent {
                 // filter data   'h'
                 val cloneList = foodList.clone() as ArrayList<FoodData>
                 val filteredList = cloneList.filter { foodItem ->
-                    foodItem.txt_title.contains( editTextInput )
+                    foodItem.txt_title.contains(editTextInput)
                 }
 
-                myadapter.setData(  ArrayList( filteredList )  )
+                myadapter.setData(ArrayList(filteredList))
 
 
             } else {

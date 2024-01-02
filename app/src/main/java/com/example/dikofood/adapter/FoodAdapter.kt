@@ -16,7 +16,8 @@ class FoodAdapter(val data: ArrayList<FoodData>, val foodEvent: FoodEvent) :
 
     inner class FoodViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview) {
         fun bindView(foodData: FoodData) {
-            Glide.with(itemView.context)
+            Glide
+                .with(itemView.context)
                 .load(foodData.img_url)
                 .into(binding.imageView)
 
