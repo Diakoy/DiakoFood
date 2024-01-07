@@ -60,7 +60,7 @@ class FoodAdapter(val data: ArrayList<FoodData>, val foodEvent: FoodEvent) :
     }
 
     fun addNewFood(newFood: FoodData) {
-        data.add(0, newFood)
+        data.add(0 , newFood)
         notifyItemInserted(0)
     }
 
@@ -92,6 +92,7 @@ class FoodAdapter(val data: ArrayList<FoodData>, val foodEvent: FoodEvent) :
 
         fun onFoodClicked(updatedFood: FoodData, position: Int)
         fun onFoodLongClicked(food: FoodData, position: Int)
+
     }
 
 }
